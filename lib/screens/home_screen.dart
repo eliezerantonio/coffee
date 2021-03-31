@@ -1,7 +1,7 @@
-import 'dart:math';
 import 'dart:ui';
 
-import 'package:coffee/models/custom_path.dart';
+import 'package:coffee/widgets/card_primary.dart';
+import 'package:coffee/widgets/logo.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Color.fromRGBO(154, 73, 0, 1),
-        title: Text("Logo"),
+        title: Logo(logo: "white"),
         centerTitle: true,
       ),
       body: Column(
@@ -77,78 +77,23 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Stack(
-            children: [
-              Card(
-                margin: EdgeInsets.all(22),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 8,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 9,
-                    ),
-                    Icon(Icons.favorite, color: Color.fromRGBO(154, 73, 0, 1)),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      "\$13",
-                      style:
-                          TextStyle(fontSize: 27, fontWeight: FontWeight.w900),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Text(
-                      "Cappuccione",
-                      style: TextStyle(fontSize: 22),
-                    ),
-                    SizedBox(
-                      height: 24,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 25, top: 7),
-                      child: Text(
-                        "this is on empresao with a thil layer of faamy stemed milk",
-                        style: TextStyle(fontSize: 17),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                height: 300,
-                child: Align(
-                  alignment: Alignment.topRight,
-                  child: Image.asset(
-                    "images/principal.png",
-                    width: 150,
-                  ),
-                ),
-              ),
-              Container(
-                height: 230,
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Container(
-                    child: Icon(
-                      Icons.add_box_rounded,
-                      size: 60,
-                      color: Color.fromRGBO(
-                        154,
-                        73,
-                        0,
-                        1,
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            ],
+          Expanded(
+            flex: 2,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                CardPrimary(),
+                CardPrimary(),
+                CardPrimary(),
+                CardPrimary(),
+                CardPrimary(),
+                CardPrimary(),
+              ],
+            ),
           ),
+          Expanded(
+            child: Text("oi"),
+          )
         ],
       ),
     );
