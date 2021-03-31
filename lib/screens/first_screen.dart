@@ -2,7 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:coffee/models/custom_path.dart';
-import 'package:coffee/widgets/logo.dart';
+import 'package:coffee/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
@@ -16,7 +16,7 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Color.fromRGBO(154, 73, 0, 1),
-        title: Logo(
+        title: LogoWidget(
           logo: "white",
         ),
         centerTitle: true,
