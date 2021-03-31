@@ -14,7 +14,7 @@ final DUMMY_COFFEES = [
     name: 'Frapuciono',
     description:
         "this is an espresso whith a thick layer of faamy steamed milk",
-    price: 13,
+    price: 14,
     imageUrl: "images/frappucino.png",
   ),
 ];

@@ -1,7 +1,10 @@
+import 'package:coffee/models/Coffee.dart';
+import 'package:coffee/widgets/icon_favorite.dart';
 import 'package:flutter/material.dart';
 
 class CardPrimary extends StatelessWidget {
-  const CardPrimary({Key key}) : super(key: key);
+  CardPrimary(this.coffee);
+  Coffee coffee;
 
   @override
   Widget build(BuildContext context) {
@@ -23,19 +26,21 @@ class CardPrimary extends StatelessWidget {
                   SizedBox(
                     height: 9,
                   ),
-                  Icon(Icons.favorite, color: Color.fromRGBO(154, 73, 0, 1)),
+                  IconFavorite(
+                    opacity: !coffee.isFavorite ? 0.4 : 1,
+                  ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
-                    "\$13",
+                    "\$${coffee.price}",
                     style: TextStyle(fontSize: 27, fontWeight: FontWeight.w900),
                   ),
                   SizedBox(
                     height: 15,
                   ),
                   Text(
-                    "Cappuccione",
+                    "${coffee.name}",
                     style: TextStyle(fontSize: 22),
                   ),
                   SizedBox(
@@ -44,7 +49,7 @@ class CardPrimary extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 25, top: 7),
                     child: Text(
-                      "this is on empresao with a thil layer of faamy stemed milk",
+                      "${coffee.description}",
                       style: TextStyle(fontSize: 17),
                     ),
                   ),
