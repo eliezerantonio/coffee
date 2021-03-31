@@ -15,7 +15,6 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(154, 73, 0, 1),
         title: LogoWidget(
           logo: "white",
         ),

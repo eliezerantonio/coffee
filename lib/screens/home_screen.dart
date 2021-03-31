@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:coffee/data/coffee_data.dart';
 import 'package:coffee/models/Coffee.dart';
+import 'package:coffee/screens/detail_coffe_screen.dart';
 import 'package:coffee/widgets/card_primary.dart';
 import 'package:coffee/widgets/card_secundary.dart';
 import 'package:coffee/widgets/logo_widget.dart';
@@ -18,7 +19,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(154, 73, 0, 1),
         title: LogoWidget(logo: "white"),
         centerTitle: true,
       ),

@@ -7,7 +7,7 @@ final DUMMY_COFFEES = [
     description:
         "this is an espresso whith a thick layer of faamy steamed milk",
     price: 13,
-    imageUrl: "images/frappucino.png",
+    imageUrl: "images/principal.png",
   ),
   Coffee(
     id: 'c2',
@@ -15,6 +15,14 @@ final DUMMY_COFFEES = [
     description:
         "this is an espresso whith a thick layer of faamy steamed milk",
     price: 14,
-    imageUrl: "images/frappucino.png",
+    imageUrl: "images/principal.png",
   ),
+  Coffee(
+      id: 'c3',
+      name: 'Americano',
+      description:
+          "this is an espresso whith a thick layer of faamy steamed milk",
+      price: 11,
+      imageUrl: "images/principal.png",
+      isFavorite: true),
 ];

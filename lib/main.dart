@@ -10,7 +10,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Coffee',
-      
+      theme: ThemeData(
+        primaryColor: Color.fromRGBO(154, 73, 0, 1),
+      ),
       home: FirstScreen(),
     );
   }
