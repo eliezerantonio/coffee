@@ -39,15 +39,11 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 CardPrimary(),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Text("Popular",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold)),
-                      CardSecunday(),
-                    ],
-                  ),
+                Column(
+                  
+                  children: [
+                    CardSecunday(),
+                  ],
                 )
               ],
             ),
