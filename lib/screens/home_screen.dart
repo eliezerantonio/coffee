@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:coffee/data/coffee_data.dart';
@@ -28,37 +29,40 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Popular",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
-                    Text("Popular",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
-                    Text("Popular",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold))
-                  ],
-                ),
-                Expanded(
-                  child: Container(
-                    height: 300,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: coffees.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return CardPrimary(coffees[index]);
-                      },
-                    ),
+                Container(
+                  height: 300,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: coffees.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return CardPrimary(coffees[index]);
+                    },
                   ),
                 ),
-                Column(
-                  children: [
-                    CardSecunday(),
-                  ],
-                )
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    "Popular",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                if (Platform.isLinux || Platform.isWindows || Platform.isMacOS)
+                  Row(
+                    children: [
+                      Expanded(child: CardSecunday()),
+                      Expanded(child: CardSecunday()),
+                    ],
+                  ),
+                CardSecunday(),
+                CardSecunday(),
+                CardSecunday(),
+                CardSecunday(),
+                CardSecunday(),
+                CardSecunday(),
+                CardSecunday(),
+                CardSecunday(),
+                CardSecunday()
               ],
             ),
           ),

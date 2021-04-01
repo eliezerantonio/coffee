@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class CardSecunday extends StatelessWidget {
@@ -41,33 +43,36 @@ class CardSecunday extends StatelessWidget {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.topLeft,
-            child: Container(
-              child: Image.asset(
-                "images/frappucino.png",
-                width: 100,
-              ),
-            ),
-          ),
-          Container(
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Container(
-                margin: EdgeInsets.only(right: 10),
-                child: Icon(
-                  Icons.add_box_rounded,
-                  size: 50,
-                  color: Color.fromRGBO(
-                    154,
-                    73,
-                    0,
-                    1,
+          Row(
+            children: [
+              Align(
+                child: Container(
+                  child: Image.asset(
+                    "images/frappucino.png",
+                    width: 100,
                   ),
                 ),
               ),
-            ),
-          ),
+              Spacer(),
+              Container(
+                child: Align(
+                  child: Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: Icon(
+                      Icons.add_box_rounded,
+                      size: 50,
+                      color: Color.fromRGBO(
+                        154,
+                        73,
+                        0,
+                        1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );

@@ -36,7 +36,10 @@ class DetailCoffeeScreen extends StatelessWidget {
                 Container(
                   height: MediaQuery.of(context).size.height * 0.32,
                   child: Align(
-                      alignment: Alignment.bottomLeft, child: IconFavorite()),
+                      alignment: Alignment.bottomLeft,
+                      child: IconFavorite(
+                        opacity: !coffee.isFavorite ? 0.3 : 1,
+                      ),),
                 )
               ],
             ),
@@ -104,6 +107,36 @@ class DetailCoffeeScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: BackgroundBottomWidget(),
                 ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Text("\$${coffee.price.toString()}",
+                          style: TextStyle(
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          height: 45,
+                          child: RaisedButton(
+                            child: Text("Adicionar ao Carrinho"),
+                            onPressed: () {},
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ],

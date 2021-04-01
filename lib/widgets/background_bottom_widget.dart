@@ -4,11 +4,11 @@ class BackgroundBottomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: MediaQuery.of(context).size.height * 0.17,
       decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
           borderRadius:
-              BorderRadiusDirectional.only(topStart: Radius.circular(40))),
+              BorderRadiusDirectional.only(topEnd: Radius.circular(50))),
     );
   }
 }

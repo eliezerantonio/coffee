@@ -48,14 +48,14 @@ class CardPrimary extends StatelessWidget {
                           TextStyle(fontSize: 27, fontWeight: FontWeight.w900),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 12,
                     ),
                     Text(
                       "${coffee.name}",
                       style: TextStyle(fontSize: 22),
                     ),
                     SizedBox(
-                      height: 24,
+                      height: 18,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 25, top: 7),
@@ -76,18 +76,19 @@ class CardPrimary extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
+                    //TODO:Meter Sombra
                     child: Align(
                       alignment: Alignment.topRight,
                       child: Hero(
                         tag: coffee.id,
                         child: Image.asset(
-                          "images/principal.png",
-                          width: 150,
+                          "${coffee.imageUrl}",
+                          width: 140,
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 70),
+                  Spacer(),
                   Container(
                     padding: EdgeInsets.only(right: 10, top: 10),
                     child: Align(
