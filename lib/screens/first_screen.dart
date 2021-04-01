@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:coffee/models/custom_path.dart';
+import 'package:coffee/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
@@ -14,8 +15,9 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(154, 73, 0, 1),
-        title: Text("Logo"),
+        title: LogoWidget(
+          logo: "white",
+        ),
         centerTitle: true,
       ),
       body: Column(
@@ -27,7 +29,7 @@ class FirstScreen extends StatelessWidget {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.74,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(154, 73, 0, 1),
+                    color: Theme.of(context).primaryColor,
                     // borderRadius: BorderRadius.only(
                     //   bottomLeft: Radius.circular(50),
                     // ),
@@ -89,7 +91,7 @@ class FirstScreen extends StatelessWidget {
                   height: 50,
                   width: 180,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(154, 73, 0, 1),
+                    color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   alignment: Alignment.center,
