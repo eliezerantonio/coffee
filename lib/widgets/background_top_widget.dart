@@ -7,9 +7,9 @@ class BackgroundTopWidget extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 200,
+            height: MediaQuery.of(context).size.height * 0.28,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(154, 73, 0, 1),
+              color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(60),
               ),

@@ -11,6 +11,7 @@ class DetailCoffeeScreen extends StatelessWidget {
   Coffee coffee;
   @override
   Widget build(BuildContext context) {
+    final primaryColor = Theme.of(context).primaryColor;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -25,61 +26,74 @@ class DetailCoffeeScreen extends StatelessWidget {
                   alignment: Alignment.topRight,
                   child: Hero(
                     tag: coffee.id,
-                    child: ClipRect(
-                      child: Image.asset(
-                        coffee.imageUrl,
-                        width: 280,
-                        fit: BoxFit.fitWidth,
-                      ),
+                    child: Image.asset(
+                      coffee.imageUrl,
+                      width: 250,
+                      fit: BoxFit.fitWidth,
                     ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.bottomLeft,
-                  child: Container(
-                    child: Card(
-                      elevation: 8,
-                      child: Container(
-                        child: IconFavorite(),
-                      ),
-                    ),
-                  ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.32,
+                  child: Align(
+                      alignment: Alignment.bottomLeft, child: IconFavorite()),
                 )
               ],
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Card(
-                  elevation: 7,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        "-",
-                        style: TextStyle(fontSize: 40),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    width: 170,
+                    height: 50,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      elevation: 7,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          IconButton(
+                            color: primaryColor,
+                            icon: Icon(
+                              Icons.remove,
+                            ),
+                            onPressed: () {},
+                          ),
+                          Text(
+                            "2",
+                            style: TextStyle(fontSize: 30, color: primaryColor),
+                          ),
+                          IconButton(
+                            color: primaryColor,
+                            icon: Icon(
+                              Icons.add,
+                            ),
+                            onPressed: () {},
+                          ),
+                        ],
                       ),
-                      Text(
-                        "2",
-                        style: TextStyle(fontSize: 40),
-                      ),
-                      Text(
-                        "+",
-                        style: TextStyle(fontSize: 40),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                Text(
-                  coffee.name,
-                  style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  coffee.description,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
-              ],
+                  SizedBox(height: 15),
+                  Text(
+                    coffee.name,
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(height: 15),
+                  Text(
+                    coffee.description,
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
             ),
             Spacer(),
             Stack(

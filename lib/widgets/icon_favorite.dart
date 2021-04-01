@@ -5,13 +5,23 @@ class IconFavorite extends StatelessWidget {
   double opacity;
   @override
   Widget build(BuildContext context) {
-    return Icon(Icons.favorite,
-        size: 30,
-        color: Color.fromRGBO(
-          154,
-          73,
-          0,
-          opacity,
-        ));
+    return Container(
+      height: 70,
+      width: 70,
+      margin: EdgeInsets.only(
+        left: 36,
+      ),
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        child: Icon(Icons.favorite,
+            size: 30,
+            color: Color.fromRGBO(
+              154,
+              73,
+              0,
+              opacity,
+            )),
+      ),
+    );
   }
 }
