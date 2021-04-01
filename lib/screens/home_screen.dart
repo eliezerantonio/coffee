@@ -47,13 +47,6 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
-                if (Platform.isLinux || Platform.isWindows || Platform.isMacOS)
-                  Row(
-                    children: [
-                      Expanded(child: CardSecunday()),
-                      Expanded(child: CardSecunday()),
-                    ],
-                  ),
                 CardSecunday(),
                 CardSecunday(),
                 CardSecunday(),

@@ -21,7 +21,7 @@ class CardPrimary extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 300,
+            height: 250,
             width: 400,
             child: Card(
               margin: EdgeInsets.all(22),
@@ -34,13 +34,13 @@ class CardPrimary extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 9,
+                      height: 1,
                     ),
                     IconFavorite(
                       opacity: !coffee.isFavorite ? 0.4 : 1,
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 2,
                     ),
                     Text(
                       "\$${coffee.price}",
@@ -48,14 +48,14 @@ class CardPrimary extends StatelessWidget {
                           TextStyle(fontSize: 27, fontWeight: FontWeight.w900),
                     ),
                     SizedBox(
-                      height: 12,
+                      height: 2,
                     ),
                     Text(
                       "${coffee.name}",
                       style: TextStyle(fontSize: 22),
                     ),
                     SizedBox(
-                      height: 18,
+                      height: 1,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 25, top: 7),
@@ -84,13 +84,18 @@ class CardPrimary extends StatelessWidget {
                         child: Image.asset(
                           "${coffee.imageUrl}",
                           width: 140,
+                          height: 140,
                         ),
                       ),
                     ),
                   ),
-                  Spacer(),
+                  SizedBox(
+                    height: 40,
+                  ),
                   Container(
-                    padding: EdgeInsets.only(right: 10, top: 10),
+                    padding: EdgeInsets.only(
+                      right: 10,
+                    ),
                     child: Align(
                       alignment: Alignment.bottomRight,
                       child: Container(

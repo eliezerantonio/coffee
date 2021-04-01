@@ -32,7 +32,7 @@ class SearchWidget extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 27,
                 ),
                 Container(
                   height: 50,
@@ -46,7 +46,7 @@ class SearchWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         SizedBox(
-                          width: 15,
+                          width: 17,
                         ),
                         Icon(Icons.search),
                         SizedBox(
