@@ -11,7 +11,7 @@ class SearchWidget extends StatelessWidget {
           Container(
             height: MediaQuery.of(context).size.height * 0.14,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(154, 73, 0, 1),
+              color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(60),
               ),

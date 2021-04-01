@@ -6,7 +6,7 @@ class BackgroundBottomWidget extends StatelessWidget {
     return Container(
       height: 100,
       decoration: BoxDecoration(
-          color: Color.fromRGBO(154, 73, 0, 1),
+          color: Theme.of(context).primaryColor,
           borderRadius:
               BorderRadiusDirectional.only(topStart: Radius.circular(40))),
     );

@@ -29,7 +29,7 @@ class FirstScreen extends StatelessWidget {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.74,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(154, 73, 0, 1),
+                    color: Theme.of(context).primaryColor,
                     // borderRadius: BorderRadius.only(
                     //   bottomLeft: Radius.circular(50),
                     // ),
@@ -91,7 +91,7 @@ class FirstScreen extends StatelessWidget {
                   height: 50,
                   width: 180,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(154, 73, 0, 1),
+                    color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   alignment: Alignment.center,

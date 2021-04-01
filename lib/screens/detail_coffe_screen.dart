@@ -59,7 +59,7 @@ class DetailCoffeeScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           IconButton(
-                            color: primaryColor,
+                            color: Color.fromRGBO(154, 73, 0, 1),
                             icon: Icon(
                               Icons.remove,
                             ),
@@ -67,10 +67,12 @@ class DetailCoffeeScreen extends StatelessWidget {
                           ),
                           Text(
                             "2",
-                            style: TextStyle(fontSize: 30, color: primaryColor),
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Color.fromRGBO(154, 73, 0, 1)),
                           ),
                           IconButton(
-                            color: primaryColor,
+                            color: Color.fromRGBO(154, 73, 0, 1),
                             icon: Icon(
                               Icons.add,
                             ),
